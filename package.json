@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "echo \"no test specified\" && exit 0",
+    "ci": "npm run test"
   },
   "dependencies": {
     "express": "^5.1.0"

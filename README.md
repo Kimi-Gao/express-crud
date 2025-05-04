@@ -21,8 +21,8 @@ This project is a simple RESTful API built with Express.js v5 and TypeScript. It
 - [ ] Swagger
 - [ ] Typescript
 - [ ] Logging
-- [ ] Docker
 - [ ] Unit Testing
+- [ ] Docker
 
 **Optional Features**:
 

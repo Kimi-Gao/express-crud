@@ -24,7 +24,7 @@ This project is a simple RESTful API built with Express.js v5 and TypeScript. It
 - [ ] Unit Testing
 - [ ] Docker
 
-**Optional Features**:
+**Advanced Features**:
 
 - [ ] GraphQL
 - [ ] CI/CD
@@ -35,8 +35,9 @@ This project is a simple RESTful API built with Express.js v5 and TypeScript. It
 
 - [1. Create](#1-create)
 - [2. Read](#2-read)
-  - [2.1 Get All Posts](#21-get-all-posts)
-  - [2.2 Get a Single Post by ID](#22-get-a-single-post-by-id)
+  - [2.1 Get All Posts with Pagination](#get-all-posts-with-pagination)
+  - [2.2 Search Posts by Query Parameters](#22-search-posts-by-query-parameters)
+  - [2.3 Get a Single Post by ID](#23-get-a-single-post-by-id)
 - [3. Update](#3-update)
   - [3.1 Full Update (PUT)](#31-full-update-put)
   - [3.2 Partial Update (PATCH)](#32-partial-update-patch)
@@ -78,7 +79,7 @@ Here’s a classic example of a REST API for managing blog posts using CRUD oper
 
 ### 2. Read
 
-#### 2.1 Get All Posts
+#### Get All Posts with Pagination
 
 **HTTP Method**: `GET`
 
@@ -89,9 +90,9 @@ Here’s a classic example of a REST API for managing blog posts using CRUD oper
 ```json
 {
   "page": 1,
-  "size": 2,
-  "total_pages": 5,
-  "total_posts": 10,
+  "size": 25,
+  "total_pages": 1,
+  "total_posts": 2,
   "posts": [
     {
       "id": 1,
@@ -119,7 +120,59 @@ Here’s a classic example of a REST API for managing blog posts using CRUD oper
 - **Default Values**: If `page` or `size` parameters are not provided, default values can be set (e.g., `page=1`, `size=25`).
 - **Error Handling**: If the requested page is out of range, an appropriate error message can be returned.
 
-#### 2.2 Get a Single Post by ID
+#### 2.2 Search Posts by Query Parameters
+
+**HTTP Method**: `GET`
+
+**URL**: `/api/posts?search={query}&page={page}&size={size}`
+
+**Example Request**:
+
+- Search for posts containing the word "AI" in the title or content:
+
+  ```http
+  GET /api/posts?search=AI&page=1&size=10
+  ```
+
+**Response**:
+
+```json
+{
+  "page": 1,
+  "size": 25,
+  "total_pages": 1,
+  "total_posts": 2,
+  "posts": [
+    {
+      "id": 1,
+      "title": "The Future of Artificial Intelligence",
+      "author": "John Doe",
+      "content": "Artificial Intelligence is rapidly changing the world...",
+      "published_date": "2025-05-01",
+      "tags": ["AI", "Technology", "Future"]
+    },
+    {
+      "id": 9,
+      "title": "The Impact of AI on Healthcare",
+      "author": "Ivy Green",
+      "content": "Artificial Intelligence is improving healthcare diagnostics and treatment...",
+      "published_date": "2024-09-20",
+      "tags": ["AI", "Healthcare", "Technology"]
+    }
+  ]
+}
+```
+
+**Notes**:
+
+- **Search Parameter**: The `search` query parameter allows users to search for posts based on keywords. The search can be performed on fields like `title`, `content`, or `tags`.
+- **Pagination**: The search results are paginated, and the response includes pagination metadata (`page`, `size`, `total_pages`, `total_posts`).
+- **Case Sensitivity**: The search should be case-insensitive to ensure that users can find posts regardless of the case used in the query.
+- **Error Handling**: If no posts match the search query, return an empty list with appropriate pagination metadata.
+
+This approach allows users to efficiently search for specific posts while still benefiting from pagination for large datasets.
+
+#### 2.3 Get a Single Post by ID
 
 **HTTP Method**: `GET`
 

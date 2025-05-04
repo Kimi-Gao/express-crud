@@ -35,7 +35,7 @@ This project is a simple RESTful API built with Express.js v5 and TypeScript. It
 
 - [1. Create](#1-create)
 - [2. Read](#2-read)
-  - [2.1 Get All Posts with Pagination](#get-all-posts-with-pagination)
+  - [2.1 Get All Posts with Pagination](#21-get-all-posts-with-pagination)
   - [2.2 Search Posts by Query Parameters](#22-search-posts-by-query-parameters)
   - [2.3 Get a Single Post by ID](#23-get-a-single-post-by-id)
 - [3. Update](#3-update)
@@ -79,7 +79,7 @@ Here’s a classic example of a REST API for managing blog posts using CRUD oper
 
 ### 2. Read
 
-#### Get All Posts with Pagination
+#### 2.1 Get All Posts with Pagination
 
 **HTTP Method**: `GET`
 

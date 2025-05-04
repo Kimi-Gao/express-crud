@@ -22,13 +22,14 @@ This project is a simple RESTful API built with Express.js v5 and TypeScript. It
 - [ ] Typescript
 - [ ] Logging
 - [ ] Docker
-- [ ] Tests
+- [ ] Unit Testing
 
 **Optional Features**:
 
-- [ ] Rate Limiting
 - [ ] GraphQL
 - [ ] CI/CD
+- [ ] Rate Limiting
+- [ ] Pressure Testing
 
 ## API Docs
 

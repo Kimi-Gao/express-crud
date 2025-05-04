@@ -1,6 +1,10 @@
 # express-crud
 
-Simple backend service demo based on express v5 including:
+This project is a simple RESTful API built with Express.js v5 and TypeScript. It demonstrates basic CRUD (Create, Read, Update, Delete) operations and includes features like pagination, error handling, and data validation.
+
+## Features
+
+**Main Features**:
 
 - [ ] CRUD
   - [ ] POST
@@ -15,8 +19,16 @@ Simple backend service demo based on express v5 including:
 - [ ] Cors
 - [ ] Auth
 - [ ] Swagger
-- [ ] GraphQL
+- [ ] Typescript
+- [ ] Logging
 - [ ] Docker
+- [ ] Tests
+
+**Optional Features**:
+
+- [ ] Rate Limiting
+- [ ] GraphQL
+- [ ] CI/CD
 
 ## API Docs
 

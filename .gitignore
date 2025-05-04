@@ -1,0 +1,15 @@
+# Dependencies
+/node_modules
+
+# Envs
+.env.dev
+.env.staging
+.env.preprod
+.env.production
+
+# Logs
+npm-debug.log*
+
+# Misc
+.DS_Store
+.vscode

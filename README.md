@@ -16,6 +16,7 @@ Simple backend service demo based on express v5 including:
 - [ ] Auth
 - [ ] Swagger
 - [ ] GraphQL
+- [ ] Docker
 
 ## API Docs
 

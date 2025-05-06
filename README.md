@@ -1,4 +1,4 @@
-# express-crud
+# Node.js CRUD REST API Demo
 
 This project is a simple RESTful API built with Express.js v5 and TypeScript. It demonstrates basic CRUD (Create, Read, Update, Delete) operations and includes features like pagination, error handling, and data validation.
 
@@ -6,6 +6,7 @@ This project is a simple RESTful API built with Express.js v5 and TypeScript. It
 
 **Main Features**:
 
+- [x] Typescript
 - [ ] CRUD
   - [ ] POST
   - [ ] GET
@@ -19,7 +20,6 @@ This project is a simple RESTful API built with Express.js v5 and TypeScript. It
 - [ ] Cors
 - [ ] Auth
 - [ ] Swagger
-- [ ] Typescript
 - [ ] Logging
 - [ ] Unit Testing
 - [ ] Docker
@@ -33,6 +33,8 @@ This project is a simple RESTful API built with Express.js v5 and TypeScript. It
 
 ## API Docs
 
+Here’s a classic example of a REST API for managing blog posts using CRUD operations.
+
 - [1. Create](#1-create)
 - [2. Read](#2-read)
   - [2.1 Get All Posts with Pagination](#21-get-all-posts-with-pagination)
@@ -43,8 +45,6 @@ This project is a simple RESTful API built with Express.js v5 and TypeScript. It
   - [3.2 Partial Update (PATCH)](#32-partial-update-patch)
 - [4. Delete](#4-delete)
 - [Notes](#notes)
-
-Here’s a classic example of a REST API for managing blog posts using CRUD operations.
 
 ### 1. Create
 
